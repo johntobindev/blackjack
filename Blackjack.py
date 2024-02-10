@@ -83,7 +83,7 @@ def main():
     player_lost = False
     player_21 = get_hand_total(player_hand) == 21
 
-    while prompt_player_hit():
+    while not player_21 and prompt_player_hit():
         print()
         print_square("Hitting...", colours['yellow'])
         print()
