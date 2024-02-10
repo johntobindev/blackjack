@@ -24,6 +24,10 @@ for suit in suits:
         })
 
 
+def get_deck():
+    return cards.copy()
+
+
 def deal(cards, hand):
     hand.append(cards.pop())
 

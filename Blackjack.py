@@ -45,8 +45,11 @@ def print_results():
 
 
 def main():
-    # Shuffle the cards
-    random.shuffle(cards)
+    deck = get_deck()
+    print(len(deck))
+
+    # Shuffle the deck
+    random.shuffle(deck)
 
     player_hand = []
     dealer_hand = []
@@ -58,10 +61,10 @@ def main():
     print()
     sleep(0.5)
 
-    deal(cards, player_hand)
+    deal(deck, player_hand)
     print_cards(player_hand, "Player")
 
-    deal(cards, dealer_hand)
+    deal(deck, dealer_hand)
     print_cards(dealer_hand, "Dealer")
 
     # Round 2
@@ -72,10 +75,10 @@ def main():
     print()
     sleep(0.5)
 
-    deal(cards, player_hand)
+    deal(deck, player_hand)
     print_cards(player_hand, "Player")
 
-    deal(cards, dealer_hand)
+    deal(deck, dealer_hand)
     print_cards(dealer_hand, "Dealer", True)
 
     # Round 3+
@@ -89,7 +92,7 @@ def main():
         print()
         sleep(0.5)
 
-        deal(cards, player_hand)
+        deal(deck, player_hand)
         print_cards(player_hand, "Player")
         print_cards(dealer_hand, "Dealer", True)
 
@@ -118,7 +121,7 @@ def main():
         print_square("Dealer's hand less than 17. Hitting...", colours['yellow'])
         print()
         sleep(0.5)
-        deal(cards, dealer_hand)
+        deal(deck, dealer_hand)
         print_cards(player_hand, "Player")
         print_cards(dealer_hand, "Dealer")
 
