@@ -46,7 +46,6 @@ def print_results():
 
 def main():
     deck = get_deck()
-    print(len(deck))
 
     # Shuffle the deck
     random.shuffle(deck)
